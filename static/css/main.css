@@ -242,7 +242,6 @@ span{
 	text-align:center;
 	position:relative;
 	color:var(--color-calendar-third);
-	display:block;
 	-webkit-appearance:none;
 	-moz-appearance:none;
 	appearance:none;
@@ -270,7 +269,7 @@ span{
 	z-index:10
 }
 .field_show-option ul{
-	max-height:200px;
+	max-height:250px;
 	overflow-y:auto;
 	position:absolute;
 	top:0;
@@ -283,7 +282,8 @@ span{
 	border:1px solid var(--color-calendar-border,gray)
 }
 .field_show-option ul li:first-child{
-	position:static;
+	position:sticky;
+	top:0;
 	background:var(--color-calendar-secend)
 }
 .field_show-option ul li:first-child:after{
@@ -611,8 +611,9 @@ main{
 		width:25%
 	}
 	.calendar__field_full-page ul li:first-child{
+		position:sticky;
+		top:0;
 		margin-inline:5px;
-		position:relative;
 		pointer-events:auto;
 		background:var(--color-calendar-four);
 		overflow:hidden
